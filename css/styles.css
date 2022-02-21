@@ -1,0 +1,144 @@
+:root{
+    --violeta: hsl(257, 40%, 49%);
+    --magenta: hsl(300, 69%, 71%);
+    --fontHeading: 'Poppins', sans-serif;
+    --fontBody: 'Open Sans', sans-serif;
+}
+html{
+    box-sizing: border-box;
+}
+*,
+*:after,
+*:before{
+    box-sizing: inherit;
+}
+img{
+    max-width: 100%;
+}
+body{
+    background-image: url(/images/bg-mobile.svg);
+    background-repeat: no-repeat;
+    background-color: var(--violeta);
+}
+@media (min-width:768px){
+    body{
+        background-image: url(/images/bg-desktop.svg);
+        background-repeat: no-repeat;
+    }
+}
+.container{
+    height: 100vh;
+    width: 1200px;
+    max-width: 85%;
+    margin: 0 auto;
+}
+@media (min-width:768px){
+    .container{
+        width: 1440px;
+        max-width: 98%;
+    } 
+}
+.header{
+    display: flex;
+    flex-direction: column;
+}
+.header__logo{
+    max-width: 40%;
+    margin-top: 1.5rem;
+    margin-bottom: 3.5rem;
+}
+@media (min-width:768px){
+    .header__logo{
+        max-width: 33%;
+        margin-top: 2.5rem;
+        margin-bottom: 5rem;
+    }
+}
+.main{
+    font-family: var(--fontHeading);
+    color: white;
+    line-height: 1.5;
+    text-align: center;
+}
+.main__title{
+    line-height: 1.3;
+    font-size: 1.5rem;
+    padding-top: 2rem;
+}
+.main__info{
+    margin-bottom: 1.5rem;
+}
+.main__boton{
+    background-color: white;
+    text-decoration: none;
+    padding: .6rem; 
+    display: block;
+    width: 220px;
+    border-radius: 25px;
+    margin: 0 auto;
+    -webkit-box-shadow: 3px 5px 18px -11px rgba(0,0,0,0.75);
+    -moz-box-shadow: 3px 5px 18px -11px rgba(0,0,0,0.75);
+    box-shadow: 3px 5px 18px -11px rgba(0,0,0,0.75);
+}
+@media (min-width:768px){
+    .flex-container{
+        display: flex;
+    }
+    .header{
+        flex: 0 0 55%;
+    }
+    .main{
+        text-align: left;
+        padding-left: 3rem;
+        margin-top: 13.5%;
+        padding-right: .7rem;
+    }
+    .main__title{
+        font-size: 2.8rem;
+    }
+    .main__boton{
+        margin: 0;
+        text-align: center;
+    }
+}
+/*sociales*/
+.footer__sociales li a{
+    margin-right: 1.5rem;
+    text-decoration: none;
+}
+.footer__sociales ul li span{
+    display: none;
+}
+.footer__sociales ul{
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    font-size: 1rem;
+    margin-top: 4rem;
+    margin-bottom: 2rem;
+}
+.footer__sociales ul li a:before{
+    font-family: "Font Awesome 5 brands";
+    color: white;
+}
+.footer__sociales ul li a[href*='facebook.com']::before {
+    content: "\f39e";
+}
+.footer__sociales ul li a[href*='twitter.com']::before {
+    content: "\f099"
+}
+.footer__sociales ul li a[href*='instagram.com']::before {
+    content: "\f16d"
+}
+@media (min-width:768px){
+    .footer__sociales ul{
+        font-size: 1.3rem;
+    }
+}
+@media (min-width:1000px){
+    .footer__sociales ul{
+        justify-content: flex-end;
+        margin-top: 1rem;
+        font-size: 1.3rem;
+    }
+}
